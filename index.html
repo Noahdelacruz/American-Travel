@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>American Travel | Visados Laborales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: #003366;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
+    .lang-switch button {
+      background: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d2') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .countries {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .country {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 250px;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button[type="submit"] {
+      background: #003366;
+      color: white;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .social {
+      margin-top: 30px;
+    }
+    .social a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: #003366;
+      text-decoration: none;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="title">American Travel</h1>
+    <nav>
+      <a href="#servicios" id="navServicios">Servicios</a>
+      <a href="#paises" id="navPaises">Países</a>
+      <a href="#contacto" id="navContacto">Contacto</a>
+    </nav>
+    <div class="lang-switch">
+      <button onclick="setLanguage('es')">ES</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 id="heroTitle">Visados Laborales a EE.UU. y Canadá</h1>
+    <p id="heroText">Conectamos talento centroamericano con oportunidades reales de trabajo.</p>
+  </section>
+
+  <section class="section" id="servicios">
+    <h2 id="serviciosTitle">Nuestros Servicios</h2>
+    <p id="serviciosText">Ofrecemos asesoría completa para obtener visados laborales legales para Estados Unidos y Canadá. Te guiamos paso a paso, desde la aplicación hasta la entrevista en la embajada.</p>
+  </section>
+
+  <section class="section" id="paises">
+    <h2 id="paisesTitle">Países Beneficiados</h2>
+    <div class="countries">
+      <div class="country">
+        <h3>Honduras</h3>
+        <p id="hondurasText">Asistencia especializada en Tegucigalpa, San Pedro Sula y más.</p>
+      </div>
+      <div class="country">
+        <h3>Guatemala</h3>
+        <p id="guatemalaText">Atendemos todo el país con enfoque en visado H2B y programas agrícolas.</p>
+      </div>
+      <div class="country">
+        <h3>Nicaragua</h3>
+        <p id="nicaraguaText">Apoyo directo y seguro en la preparación de documentos y entrevistas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <h2 id="contactTitle">Contáctanos</h2>
+    <p id="contactText">¿Listo para comenzar tu proceso de visa laboral?</p>
+    <form action="mailto:info@americantravel.com" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo electrónico" required />
+      <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit" id="sendBtn">Enviar mensaje</button>
+    </form>
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook-square"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 American Travel. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      es: {
+        navServicios: "Servicios",
+        navPaises: "Países",
+        navContacto: "Contacto",
+        heroTitle: "Visados Laborales a EE.UU. y Canadá",
+        heroText: "Conectamos talento centroamericano con oportunidades reales de trabajo.",
+        serviciosTitle: "Nuestros Servicios",
+        serviciosText: "Ofrecemos asesoría completa para obtener visados laborales legales para Estados Unidos y Canadá. Te guiamos paso a paso, desde la aplicación hasta la entrevista en la embajada.",
+        paisesTitle: "Países Beneficiados",
+        hondurasText: "Asistencia especializada en Tegucigalpa, San Pedro Sula y más.",
+        guatemalaText: "Atendemos todo el país con enfoque en visado H2B y programas agrícolas.",
+        nicaraguaText: "Apoyo directo y seguro en la preparación de documentos y entrevistas.",
+        contactTitle: "Contáctanos",
+        contactText: "¿Listo para comenzar tu proceso de visa laboral?",
+        sendBtn: "Enviar mensaje"
+      },
+      en: {
+        navServicios: "Services",
+        navPaises: "Countries",
+        navContacto: "Contact",
+        heroTitle: "Work Visas to the U.S. and Canada",
+        heroText: "Connecting Central American talent with real job opportunities.",
+        serviciosTitle: "Our Services",
+        serviciosText: "We provide full support to obtain legal work visas for the U.S. and Canada. We guide you step by step, from application to embassy interview.",
+        paisesTitle: "Eligible Countries",
+        hondurasText: "Specialized assistance in Tegucigalpa, San Pedro Sula, and more.",
+        guatemalaText: "We serve the whole country with a focus on H2B and agricultural programs.",
+        nicaraguaText: "Direct and secure support for documents and interview preparation.",
+        contactTitle: "Contact Us",
+        contactText: "Ready to start your work visa process?",
+        sendBtn: "Send Message"
+      }
+    };
+
+    function setLanguage(lang) {
+      for (const key in translations[lang]) {
+        const el = document.getElementById(key);
+        if (el) el.innerText = translations[lang][key];
+      }
+    }
+  </script>
+
+</body>
+</html>
